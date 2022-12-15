@@ -1,0 +1,20 @@
+Steps
+
+1. Prerequisites - Docker must be installed on system. Easiet way is to install the Docker desktop for Windows/Mac/Linux
+
+2. unzip docker_casestudy.zip (Note: The zip file contains all required files to built docker image and run the container)
+
+3. switch to docker_casestudy folder
+ $ cd docker_casestudy/
+
+4. Build the docker image
+ $ docker build -t array-combiner -f Dockerfile .
+
+5. verify docker image has been created using below command. it shall list the recently created "array-combiner" docker image
+ $ docker images
+
+6. run the docker container using the docker image build in previous step
+ $ docker run array-combiner combine_arrays '[1,2,5]' '[3,7]'
+
+ Format of above run command:
+ $ docker run <image tage name> <function-name> <list 1> <list 2>
